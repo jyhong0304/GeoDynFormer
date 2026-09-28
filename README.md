@@ -81,7 +81,7 @@ The underlying behavioral data are available from the corresponding author upon 
 
 This project is released under the **MIT License**.
 
-See [`LICENSE`](LICENSE) for details.
+See [`LICENSE`](LICENSE.md) for details.
 
 ## Citation
 
