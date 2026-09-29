@@ -241,7 +241,7 @@ class Experiment(nn.Module, ConfigMixin):
             # Load the default configuration.
             self.config_params = yaml.safe_load(
                 pkgutil.get_data(
-                    "affective_task_switching",
+                    "affective_task",
                     "config/model_config.yaml",
                 )
             )

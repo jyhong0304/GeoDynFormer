@@ -4,7 +4,7 @@ import argparse
 import time
 from pathlib import Path
 
-from affective_task_switching import Experiment
+from affective_task import Experiment
 
 RAW_DATA_FILENAME = "data_pre_split.pkl"
 
