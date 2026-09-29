@@ -8,8 +8,6 @@ Jinyung Hong et al.
 
 GeoDynFormer is a subject-specific latent dynamical modeling framework for affective task-switching (ATS) behavior. The framework models trial-by-trial behavioral responses as temporally evolving latent dynamics and enables geometric analysis of latent-state trajectories.
 
----
-
 ## Repository contents
 
 This repository contains code for:
@@ -180,7 +178,7 @@ https://doi.org/10.5281/zenodo.22776714
 
 The underlying behavioral data are available from the corresponding author upon reasonable request, as described in the manuscript.
 
----
+
 
 ## License
 
