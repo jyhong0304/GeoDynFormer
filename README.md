@@ -211,11 +211,11 @@ Citation information will be updated upon publication.
 For questions regarding the code or analyses:
 
 **Jinyung Hong**  
-Email: jinyung0304@gmail.com
+Email: jinyung0304 [at] gmail [dot] com
 
 For questions regarding the study:
 
 **Andrew I. Yang**  
-Department of Neurosurgery  
+Department of Translational Neuroscience  
 Barrow Neurological Institute  
-Email: iyang.and@gmail.com
+Email: iyang.and [at] gmail [dot] com
