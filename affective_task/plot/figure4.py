@@ -20,7 +20,7 @@ class Figure4:
 
     # Exemplar participants.
     repeat_exemplar_1 = "25"
-    repeat_exemplar_2 = "27"
+    repeat_exemplar_2 = "66_1"
     switch_exemplar_1 = "36"
     switch_exemplar_2 = "37"
 
@@ -124,9 +124,9 @@ class Figure4:
             projection="3d",
         )
         plot_kwargs_b = {
-            "xlim": [-6, 16],
-            "ylim": [-9, 6],
-            "zlim": [-20, 1],
+            "xlim": [-5, 15],
+            "ylim": [-13, 5],
+            "zlim": [0, 18],
             "colors": [
                           Constants.COLOR_G2G,
                           Constants.COLOR_E2E,
@@ -136,13 +136,14 @@ class Figure4:
                       * 2,
             "line_styles": ["-"] * 4 + ["--"] * 4,
             "annotate": "global",
-            "plot_t_posts": [1300] * 8,
+            "plot_t_posts": [1000, 1000, 1000, 1200, 1200, 1200, 1200, 1200],
             "R": self.group_Rs[self.repeat_exemplar_2],
         }
         self._make_full_condition_panel(
             ax_b,
             self.exemplar_stats[self.repeat_exemplar_2],
             plot_kwargs_b,
+            azim=85
         )
 
         # ------------------------------------------------------------------
