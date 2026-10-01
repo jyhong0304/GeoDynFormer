@@ -7,7 +7,7 @@ import time
 import matplotlib
 
 # Select the interactive backend before importing pyplot.
-# matplotlib.use("TkAgg")
+matplotlib.use("TkAgg")
 
 import matplotlib.pyplot as plt
 
