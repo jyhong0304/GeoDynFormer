@@ -111,7 +111,7 @@ class Figure8BF:
         gs = fig.add_gridspec(5, 12)
 
         # ------------------------------------------------------------------
-        # Figure 8b: task-relevant alignment for repeat trials over [NDT, RT].
+        # Figure 8f: task-relevant alignment for repeat trials over [NDT, RT].
         # ------------------------------------------------------------------
         repeat_df = self._compute_repeat_alignment_dataframe(
             t_start=Constants.T_NDT,
@@ -135,7 +135,7 @@ class Figure8BF:
         )
 
         # ------------------------------------------------------------------
-        # Figure 8f: task-irrelevant alignment for switch trials over [0, NDT].
+        # Figure 8b: task-irrelevant alignment for switch trials over [0, NDT].
         # ------------------------------------------------------------------
         switch_df = self._compute_switch_alignment_dataframe(
             t_start=Constants.T_START,
