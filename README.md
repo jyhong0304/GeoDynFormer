@@ -6,7 +6,9 @@ Official implementation of GeoDynFormer accompanying the manuscript:
 
 Jinyung Hong et al.
 
-GeoDynFormer is a subject-specific latent dynamical modeling framework for affective task-switching (ATS) behavior. The framework models trial-by-trial behavioral responses as temporally evolving latent dynamics and enables geometric analysis of latent-state trajectories.
+GeoDynFormer is a subject-specific latent dynamical modeling framework for affective task-switching (ATS) behavior. The
+framework models trial-by-trial behavioral responses as temporally evolving latent dynamics and enables geometric
+analysis of latent-state trajectories.
 
 ## Repository contents
 
@@ -45,7 +47,8 @@ The code was tested on:
 
 GeoDynFormer models used in the manuscript were trained on an **NVIDIA RTX Ada 6000 GPU**.
 
-Users who wish to use GPU acceleration should ensure that their CUDA and NVIDIA driver configuration is compatible with the installed PyTorch version. Runtime will depend on the available hardware.
+Users who wish to use GPU acceleration should ensure that their CUDA and NVIDIA driver configuration is compatible with
+the installed PyTorch version. Runtime will depend on the available hardware.
 
 ## Installation
 
@@ -133,7 +136,7 @@ saved_models_ats/
 The default configuration is loaded from:
 
 ```text
-affective_task_switching/config/model_config.yaml
+affective_task/config/model_config.yaml
 ```
 
 A different YAML configuration can be supplied with:
@@ -170,15 +173,69 @@ python train_geodynformer.py \
 If these optional arguments are omitted, the corresponding values in
 `model_config.yaml` are used.
 
+## Reproduce the main manuscript figures
+
+The main manuscript figures can be reproduced with:
+
+```text
+affective_task/plot/make_main.py
+```
+
+The script generates **Figures 2–8** in manuscript order using the pretrained
+subject-specific GeoDynFormer models and the corresponding analysis outputs.
+
+From the repository root, run:
+
+```bash
+python affective_task/plot/make_main.py \
+    --model_dir ./trained_models \
+    --figure_dir ./figures
+```
+
+Here:
+
+- `--model_dir` specifies the directory containing the subject-specific model
+  subdirectories;
+- `--figure_dir` specifies where the generated figures are saved;
+- `--patient_id` can optionally be used to provide a comma-separated subset of
+  participant IDs; and
+- `--do-preprocessing` can optionally be added to recompute the model-analysis
+  outputs before generating the figures.
+
+For example, to recompute the required model-analysis outputs and then generate
+all main figures:
+
+```bash
+python affective_task/plot/make_main.py \
+    --model_dir ./trained_models \
+    --figure_dir ./figures \
+    --do-preprocessing
+```
+
+If `--patient_id` is omitted, the script uses the full 22-participant manuscript
+cohort.
+
+The Figure 6f–g reliability analysis additionally expects the following
+precomputed files under the repository-level `dataset/` directory:
+
+```text
+dataset/
+├── trial_bootstrap_distribution.csv
+├── trial_bootstrap_reliability_by_transition.csv
+└── trial_bootstrap_reliability_summary.json
+```
+
+The plotting script saves the generated manuscript panels to the requested
+figure directory and displays them interactively with Matplotlib.
+
 ## Pretrained models
 
 The trained models analyzed in the manuscript are publicly available through Zenodo:
 
 https://doi.org/10.5281/zenodo.22776714
 
-The underlying behavioral data are available from the corresponding author upon reasonable request, as described in the manuscript.
-
-
+The underlying behavioral data are available from the corresponding author upon reasonable request, as described in the
+manuscript.
 
 ## License
 
