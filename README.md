@@ -228,6 +228,67 @@ dataset/
 The plotting script saves the generated manuscript panels to the requested
 figure directory and displays them interactively with Matplotlib.
 
+## Reproduce the Extended Data figures
+
+The Extended Data figures can be reproduced with:
+
+```text
+affective_task/plot/make_suppl.py
+```
+
+The script generates **Extended Data Figures 1–8** in manuscript order using the
+pretrained subject-specific GeoDynFormer models and the corresponding analysis
+outputs.
+
+From the repository root, run:
+
+```bash
+python affective_task/plot/make_suppl.py \
+    --model_dir ./trained_models \
+    --figure_dir ./figures
+```
+
+Here:
+
+- `--model_dir` specifies the directory containing the subject-specific model
+  subdirectories;
+- `--figure_dir` specifies where the generated figures are saved;
+- `--patient_id` can optionally be used to provide a comma-separated subset of
+  participant IDs; and
+- `--do-preprocessing` can optionally be added to recompute the model-analysis
+  outputs before generating the figures.
+
+For example, to recompute the required model-analysis outputs and then generate
+all Extended Data figures:
+
+```bash
+python affective_task/plot/make_suppl.py \
+    --model_dir ./trained_models \
+    --figure_dir ./figures \
+    --do-preprocessing
+```
+
+If `--patient_id` is omitted, the script uses the full 22-participant manuscript
+cohort.
+
+The script generates the following figure modules in order:
+
+```text
+Extended Data Figure 1    figureS1.py
+Extended Data Figure 2    figureS2.py
+Extended Data Figure 3    figureS3.py
+Extended Data Figure 4a-b figureS4AB.py
+Extended Data Figure 5a   figureS5A.py
+Extended Data Figure 5b   figureS5B.py
+Extended Data Figure 6    figureS6.py
+Extended Data Figure 7    figureS7.py
+Extended Data Figure 8a   figureS8A.py
+Extended Data Figure 8b   figureS8B.py
+```
+
+The plotting script saves the generated Extended Data panels to the requested
+figure directory and displays them interactively with Matplotlib.
+
 ## Pretrained models
 
 The trained models analyzed in the manuscript are publicly available through Zenodo:
