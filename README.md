@@ -2,7 +2,9 @@
 
 Official implementation of GeoDynFormer accompanying the manuscript:
 
-[Dynamics and geometry of emotion and cognition: an interpretable model of individual human behavior](https://www.biorxiv.org/content/10.64898/2026.09.08.749516v1.abstract), Jinyung Hong et al.
+[Dynamics and geometry of emotion and cognition: an interpretable model of individual human behavior](https://www.biorxiv.org/content/10.64898/2026.09.08.749516v1.abstract)
+
+Jinyung Hong et al.
 
 GeoDynFormer is a subject-specific latent dynamical modeling framework for affective task-switching (ATS) behavior. The
 framework models trial-by-trial behavioral responses as temporally evolving latent dynamics and enables geometric
